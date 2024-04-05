@@ -1,0 +1,36 @@
+@import '../../app/styles/utils/variables';
+
+.main {
+  &__title {
+    color: red;
+    font: 400 24px/1.33 $font;
+    @media (max-width: $laptop) {
+      color: blue;
+    }
+    @media (max-width: $mobile) {
+      color: yellow;
+    }
+  }
+  &__descr {
+    color: red;
+    font: 400 18px/1.33 $fontUbuntu;
+  }
+  &__count {
+    color: pink;
+    font: 400 56px/1.33 $fontUbuntu;
+  }
+  &__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 13px 25px;
+    text-align: center;
+    font: 400 18px/1.33 $font;
+    border: unset;
+    background: black;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    text-transform: uppercase;
+  }
+}
