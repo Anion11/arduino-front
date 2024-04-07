@@ -1,12 +1,9 @@
 import style from './loading.module.scss';
 
-const Loading = () => {
-  console.log(style.loaderWrapper);
+const Loading = () => (
+  <div className={style.loaderWrapper}>
+    <span className={style.loader} />
+  </div>
+);
 
-  return (
-    <div className={style.loaderWrapper}>
-      <span className={style.loader} />
-    </div>
-  );
-};
 export default Loading;

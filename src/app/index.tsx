@@ -4,9 +4,7 @@ import AppRouter from './router/router';
 const App = () => (
   <div className="app">
     <header>header</header>
-    <main>
-      <AppRouter />
-    </main>
+    <AppRouter />
     <footer>footer</footer>
   </div>
 );

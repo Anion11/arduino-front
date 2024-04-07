@@ -52,6 +52,7 @@
           }
         ],
         "prettier/prettier": 2,
-        "import/no-extraneous-dependencies": 0
+        "import/no-extraneous-dependencies": 0,
+        "linebreak-style": 2
     }
 }
