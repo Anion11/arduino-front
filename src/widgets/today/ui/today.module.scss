@@ -1,0 +1,43 @@
+@import '../../../app/styles/utils/variables.scss';
+
+.today {
+  flex: 1;
+  padding: 50px 100px;
+  background: $noThemeBg;
+  border-radius: 30px;
+  color: $noThemeColor;
+  text-align: center;
+  border: 1px solid $black;
+  box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.5);
+  @media (max-width: $laptop) {
+    padding: 40px 70px;
+  }
+  @media (max-width: $mobile) {
+    padding: 30px;
+  }
+  &__city {
+    font: 700 24px/1.33 $font;
+    @media (max-width: $laptop) {
+      font-size: 22px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 20px;
+    }
+  }
+  &__time {
+    margin-top: 40px;
+    font: 700 72px/1.2 $font;
+    @media (max-width: $laptop) {
+      font-size: 60px;
+    }
+    @media (max-width: $mobile) {
+      font-size: 52px;
+    }
+  }
+  &__date {
+    font: 40 18px/1.33 $font;
+    @media (max-width: $laptop) {
+      font-size: 16px;
+    }
+  }
+}

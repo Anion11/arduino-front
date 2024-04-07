@@ -1,25 +1,28 @@
-import { useState } from 'react';
 import style from './styles.module.scss';
+import SwitcherTheme from '../../shared/switcherTheme';
+import { Today } from '../../widgets/today';
+import { Prediction } from '../../widgets/prediction';
 
-const MainPage = () => {
-  const [count, setCount] = useState(0);
-
-  return (
+const MainPage = () => (
+  <div>
     <div className="inner">
-      <p className={style.main__title}>App title</p>
-      <p className={style.main__descr}>App description</p>
-      <p className={`${style.main__count} text-center`}>App counter: {count}</p>
-      <button
-        type="button"
-        className={style.main__button}
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Нажми меня
-      </button>
+      <section className="section">
+        <SwitcherTheme />
+      </section>
+      <section className="section">
+        <div className={style.main__wrapper}>
+          <Today />
+          <div>Блок 2</div>
+        </div>
+      </section>
+      <section className="section">
+        <div className={style.main__wrapper}>
+          <Prediction />
+          <div>Блок 4</div>
+        </div>
+      </section>
     </div>
-  );
-};
+  </div>
+);
 
 export default MainPage;
