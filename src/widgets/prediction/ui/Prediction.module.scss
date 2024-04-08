@@ -1,7 +1,7 @@
 @import '../../../app/styles/utils/variables.scss';
 
 .prediction {
-  padding: 18px 30px 5px 15px;
+  padding: 18px 30px 5px;
   background: $noThemeBg;
   border-radius: 30px;
   color: $noThemeColor;
@@ -9,7 +9,7 @@
   border: 1px solid $black;
   box-shadow: 8px 6px 4px rgba(0, 0, 0, 0.5);
   @media (max-width: $laptop) {
-    padding: 15px 15px 5px;
+    padding: 15px 20px 5px;
   }
   &__title {
     font: 700 24px/1.33 $font;
@@ -20,5 +20,9 @@
     @media (max-width: $mobile) {
       font-size: 20px;
     }
+  }
+  &__content {
+    display: grid;
+    gap: 2px;
   }
 }

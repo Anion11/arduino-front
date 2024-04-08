@@ -1,7 +1,6 @@
 @import '../../../app/styles/utils/variables.scss';
 
 .today {
-  flex: 1;
   padding: 50px 100px;
   background: $noThemeBg;
   border-radius: 30px;
@@ -13,6 +12,7 @@
     padding: 40px 70px;
   }
   @media (max-width: $mobile) {
+    grid-column: span 2;
     padding: 30px;
   }
   &__city {
