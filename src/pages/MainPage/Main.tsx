@@ -2,6 +2,7 @@ import style from './styles.module.scss';
 import SwitcherTheme from '../../shared/switcherTheme';
 import { Today } from '../../widgets/today';
 import { Prediction } from '../../widgets/prediction';
+import { HourlyForecast } from '../../widgets/HourlyForecast';
 
 const MainPage = () => (
   <div>
@@ -18,7 +19,7 @@ const MainPage = () => (
       <section className="section">
         <div className={style.main__wrapper}>
           <Prediction />
-          <div>Блок 4</div>
+          <HourlyForecast />
         </div>
       </section>
     </div>

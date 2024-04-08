@@ -1,7 +1,7 @@
 @import '../../../app/styles/utils/variables.scss';
 
 .today {
-  padding: 50px 100px;
+  padding: 50px 110px;
   background: $noThemeBg;
   border-radius: 30px;
   color: $noThemeColor;
@@ -26,12 +26,12 @@
   }
   &__time {
     margin-top: 40px;
-    font: 700 72px/1.2 $font;
+    font: 700 86px/1.2 $font;
     @media (max-width: $laptop) {
-      font-size: 60px;
+      font-size: 72px;
     }
     @media (max-width: $mobile) {
-      font-size: 52px;
+      font-size: 60px;
     }
   }
   &__date {

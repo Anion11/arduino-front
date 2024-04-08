@@ -91,19 +91,18 @@ p {
   .inner {
     position: relative;
     width: 100%;
-    min-width: 320px;
     max-width: 1440px;
     margin: 0 auto;
     padding: 0 var(--inner-pd);
   }
   main {
     flex: 1 0;
-    padding-top: 65px;
+    padding: 65px;
     @media (max-width: $laptop) {
-      padding-top: 50px;
+      padding: 50px;
     }
     @media (max-width: $mobile) {
-      padding-top: 40px;
+      padding: 40px;
     }
   }
   .section {
