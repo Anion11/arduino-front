@@ -1,6 +1,7 @@
 @import '../../../app/styles/utils/variables.scss';
 
 .today {
+  display: grid;
   padding: 50px 110px;
   background: $noThemeBg;
   border-radius: 30px;
@@ -14,30 +15,5 @@
   @media (max-width: $mobile) {
     grid-column: span 2;
     padding: 30px;
-  }
-  &__city {
-    font: 700 24px/1.33 $font;
-    @media (max-width: $laptop) {
-      font-size: 22px;
-    }
-    @media (max-width: $mobile) {
-      font-size: 20px;
-    }
-  }
-  &__time {
-    margin-top: 40px;
-    font: 700 86px/1.2 $font;
-    @media (max-width: $laptop) {
-      font-size: 72px;
-    }
-    @media (max-width: $mobile) {
-      font-size: 60px;
-    }
-  }
-  &__date {
-    font: 40 18px/1.33 $font;
-    @media (max-width: $laptop) {
-      font-size: 16px;
-    }
   }
 }

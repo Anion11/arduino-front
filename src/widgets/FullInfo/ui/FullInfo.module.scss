@@ -2,8 +2,7 @@
 
 .FullInfo {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: 0.8fr 1fr;
   padding: 30px 25px;
   gap: 26px;
   background: $noThemeBg;
@@ -19,17 +18,6 @@
   &__left {
     display: grid;
     align-content: space-between;
-  }
-  &__temp {
-    font: 700 80px/1.2 $font;
-  }
-  &__tempFeels {
-    color: $textFullInfo;
-    font: 600 20px/1.33 $font;
-    span {
-      margin-left: 8px;
-      font-size: 32px;
-    }
   }
   &__sun {
     display: grid;
@@ -66,12 +54,6 @@
     color: $textFullInfo;
     font: 700 32px/1.33 $font;
   }
-  &__right {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px 15px;
-    text-align: center;
-  }
   &__icon {
     margin: 0 auto;
     width: 60px;
@@ -103,6 +85,11 @@ html[data-theme='dark'] {
       background-clip: text;
       text-fill-color: transparent;
     }
+    &__sun {
+      img:last-child {
+        display: none;
+      }
+    }
   }
 }
 
@@ -118,6 +105,11 @@ html[data-theme='light'] {
       -webkit-text-fill-color: transparent;
       background-clip: text;
       text-fill-color: transparent;
+    }
+    &__sun {
+      img:first-child {
+        display: none;
+      }
     }
   }
 }
