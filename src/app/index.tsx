@@ -1,12 +1,16 @@
 import './styles/style.scss';
 import AppRouter from './router/router';
+import useTheme from '../shared/switcherTheme/useTheme';
 
-const App = () => (
-  <div className="app">
-    <header>header</header>
-    <AppRouter />
-    <footer>footer</footer>
-  </div>
-);
+const App = () => {
+  useTheme();
+  return (
+    <div className="app">
+      <main>
+        <AppRouter />
+      </main>
+    </div>
+  );
+};
 
 export default App;

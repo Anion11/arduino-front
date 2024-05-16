@@ -1,25 +1,30 @@
-import { useState } from 'react';
 import style from './styles.module.scss';
+import SwitcherTheme from '../../shared/switcherTheme';
+import { Today } from '../../widgets/today';
+import { Prediction } from '../../widgets/prediction';
+import { HourlyForecast } from '../../widgets/HourlyForecast';
+import { FullInfo } from '../../widgets/FullInfo';
 
-const MainPage = () => {
-  const [count, setCount] = useState(0);
-
-  return (
+const MainPage = () => (
+  <div>
     <div className="inner">
-      <p className={style.main__title}>App title</p>
-      <p className={style.main__descr}>App description</p>
-      <p className={`${style.main__count} text-center`}>App counter: {count}</p>
-      <button
-        type="button"
-        className={style.main__button}
-        onClick={() => {
-          setCount(count + 1);
-        }}
-      >
-        Нажми меня
-      </button>
+      <section className="section">
+        <SwitcherTheme />
+      </section>
+      <section className="section">
+        <div className={style.main__wrapper}>
+          <Today />
+          <FullInfo />
+        </div>
+      </section>
+      <section className="section">
+        <div className={style.main__wrapper}>
+          <Prediction />
+          <HourlyForecast />
+        </div>
+      </section>
     </div>
-  );
-};
+  </div>
+);
 
 export default MainPage;
