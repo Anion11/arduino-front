@@ -13,11 +13,18 @@
     padding: 20px 16px;
   }
   @media (max-width: $mobile) {
-    padding: 15px 12px;
+    grid-template-columns: 1fr;
+    justify-items: center;
+    padding: 15px 24px 30px;
   }
   &__left {
     display: grid;
     align-content: space-between;
+    @media (max-width: $mobile) {
+      display: flex;
+      flex-direction: row-reverse;
+      gap: 30px;
+    }
   }
   &__sun {
     display: grid;
@@ -42,9 +49,9 @@
     }
   }
   &__weatherImage {
-    width: 270px;
-    height: 270px;
-    margin-bottom: 30px;
+    width: 100%;
+    max-width: 270px;
+    min-width: 200px;
     img {
       width: 100%;
     }

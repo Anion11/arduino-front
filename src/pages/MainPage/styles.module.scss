@@ -9,11 +9,11 @@
       max-width: 768px;
       grid-template-columns: 1fr;
       margin: 0 auto;
-      gap: 40px;
+      gap: 40px 0;
     }
     @media (max-width: $mobile) {
       max-width: unset;
-      gap: 20px;
+      gap: 20px 0;
     }
   }
 }

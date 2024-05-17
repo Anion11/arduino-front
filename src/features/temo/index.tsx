@@ -10,7 +10,7 @@ const Temp = () => {
       {temp ? `${temp.value}°C` : <LoadingSmall />}
       <div className={style.FullInfo__tempFeels}>
         Feels like:
-        <span>22°C</span>
+        <span>{temp ? `${Number(temp.value - 4)}°C` : <LoadingSmall />}</span>
       </div>
     </div>
   );
