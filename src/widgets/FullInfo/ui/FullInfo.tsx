@@ -4,7 +4,7 @@ import SunRiseBlack from '../../../shared/assets/sun-rise.png';
 import SunSetBlack from '../../../shared/assets/sun-set.png';
 import SunRiseWhite from '../../../shared/assets/sun-rise_white.png';
 import SunSetWhite from '../../../shared/assets/sun-set_white.png';
-import Temp from '../../../features/temo';
+import Temp from '../../../features/temp';
 
 // eslint-disable-next-line import/prefer-default-export
 export const FullInfo = () => (

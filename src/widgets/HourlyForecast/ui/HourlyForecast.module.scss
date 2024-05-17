@@ -1,6 +1,8 @@
 @import '../../../app/styles/utils/variables.scss';
 
 .HourlyForecast {
+  display: flex;
+  flex-direction: column;
   padding: 15px 80px;
   background: $noThemeBg;
   border-radius: 30px;
@@ -26,6 +28,7 @@
   }
   &__content {
     display: flex;
+    flex: 1;
     flex-wrap: wrap;
     justify-content: center;
     gap: 15px;

@@ -1,9 +1,17 @@
 import classNames from 'classnames';
 import style from './HourlyForecastColumn.module.scss';
 import CloudyWeather from '../assets/cloudy-weather.png';
-import Direction from '../assets/direction.png';
+import LoadingSmall from '../LoadingSmall';
 
-const HourlyForecastColumn = ({ isDay }: { isDay: boolean }) => {
+const HourlyForecastColumn = ({
+  isDay,
+  time,
+  temp,
+}: {
+  isDay: boolean;
+  time: string;
+  temp: number | undefined;
+}) => {
   const className = classNames(style.HourlyForecastColumn, {
     [style.day]: isDay,
     [style.night]: !isDay,
@@ -11,15 +19,13 @@ const HourlyForecastColumn = ({ isDay }: { isDay: boolean }) => {
 
   return (
     <div className={className}>
-      <div className={style.HourlyForecastColumn__time}>12:00</div>
+      <div className={style.HourlyForecastColumn__time}>{time}</div>
       <div className={style.HourlyForecastColumn__weatherIcon}>
         <img src={CloudyWeather} alt="" />
       </div>
-      <div className={style.HourlyForecastColumn__temp}>26°C</div>
-      <div className={style.HourlyForecastColumn__image}>
-        <img src={Direction} alt="" />
+      <div className={style.HourlyForecastColumn__temp}>
+        {temp ? `${temp}°C` : <LoadingSmall />}
       </div>
-      <div className={style.HourlyForecastColumn__speed}>3km/h</div>
     </div>
   );
 };
